@@ -1,0 +1,5 @@
+data_projected*
+model_weights
+
+__pycache__/
+visualization/
