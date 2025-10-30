@@ -1,7 +1,7 @@
 # Regression-based-2D-3D-Registration
 
 ## Prerequisites
-Unfortunately, we cannot release the CT data or the IDs due to the [Database Access, Sharing, and Use Agreement](https://nmdid.unm.edu/resources/data-use) from [NMDID](https://nmdid.unm.edu/).
+Unfortunately, we cannot release the CT data, weights of the model, or the IDs due to the [Database Access, Sharing, and Use Agreement](https://nmdid.unm.edu/resources/data-use) from [NMDID](https://nmdid.unm.edu/).
 
 Code for segmenting out the pelvis regions in the CT scan of the pelvis come from https://github.com/mkrcah/bone-segmentation.
 
@@ -14,7 +14,7 @@ For preprocessing, we have followed the steps below:
 - Flip the CT scan and the segmentation so that it matches the orientation of the data provided as `CT128.nii` and `CTSeg128.nii` from Gao, Cong, et al. "Generalizing spatial transformers to projective geometry with applications to 2D/3D registration." International Conference on Medical Image Computing and Computer-Assisted Intervention. Cham: Springer International Publishing, 2020.
 
 ## Generating DRRs
-For generating Digitally Reconstructed Radiographs (DRRs) using ProST:
+Put your preprocessed CT scans into `../data/CT/` and segmentations to `../data/CTSeg`. For generating Digitally Reconstructed Radiographs (DRRs) using ProST:
 ```
 python3 ProST_DRR_Generation.py
 ```

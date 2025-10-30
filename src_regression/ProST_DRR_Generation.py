@@ -30,8 +30,9 @@ def random_selection(start, end):
 
 
 def main(args):
-    actual_image_path_list = sorted(glob(f'{args.CT_dir}/*.nii'))
-    segmentation_path_list = sorted(glob(f'{args.CTSeg_dir}/*.nii'))
+    # Leave 5 for testing in registration task
+    actual_image_path_list = sorted(glob(f'{args.CT_dir}/*.nii'))[-5:]
+    segmentation_path_list = sorted(glob(f'{args.CTSeg_dir}/*.nii'))[-5:]
 
     # TODO 1: no rotation and translation
     for i in tqdm(range(len(actual_image_path_list))):
