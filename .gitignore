@@ -3,3 +3,6 @@ model_weights
 
 __pycache__/
 visualization/
+
+src_regression_and_ProST/tmp
+src_regression_and_ProST/csv
